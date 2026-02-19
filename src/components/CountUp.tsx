@@ -9,7 +9,7 @@ interface CountUpProps {
 
 const CountUp = ({ end, duration = 2, className }: CountUpProps) => {
     const ref = useRef(null);
-    const inView = useInView(ref, { once: true, margin: "-50px" });
+    const inView = useInView(ref, { once: true, amount: 0.1 });
 
     const spring = useSpring(0, {
         duration: duration * 1000,

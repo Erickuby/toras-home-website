@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Heart, Facebook, Instagram } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo-icon.png"; // Using the cropped icon for the navbar to save space, or full if preferred. Let's use the full logo as user likely wants the brand visible.
 // Actually user gave both. The "cropped" one is usually the icon. The "retina" one is the full logo.
@@ -22,6 +22,11 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
+  const socialLinks = [
+    { icon: Facebook, href: "https://www.facebook.com/people/Toras-home-ibadan/61555568011599/", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/toras_home/", label: "Instagram" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
@@ -48,15 +53,35 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Donate Button */}
-          <div className="hidden lg:block">
-            <Link
-              to="/donate"
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground rounded-full font-heading font-semibold text-sm hover:bg-terracotta-dark transition-colors duration-200"
-            >
-              <Heart className="w-4 h-4" />
-              Donate
-            </Link>
+          {/* Desktop Actions */}
+          <div className="hidden lg:flex items-center gap-4">
+            {/* Socials */}
+            <div className="flex items-center gap-3 border-r border-border pr-6 mr-2">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/70 hover:text-primary transition-colors hover:scale-110 transform duration-200"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+
+            {/* Donate Button */}
+            <div className="hidden lg:block">
+              <Link
+                to="/donate"
+                className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground rounded-full font-heading font-semibold text-sm hover:bg-terracotta-dark transition-colors duration-200"
+              >
+                <Heart className="w-4 h-4" />
+                Donate
+              </Link>
+            </div>
+
           </div>
 
           {/* Mobile toggle */}
@@ -79,6 +104,21 @@ const Navbar = () => {
             className="lg:hidden bg-background border-b border-border overflow-hidden"
           >
             <div className="container mx-auto px-4 py-4 space-y-1">
+              {/* Socials */}
+              <div className="flex items-center justify-center gap-8 py-6 border-t border-border/50 mt-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    <social.icon className="w-6 h-6" />
+                    <span className="text-base font-medium">{social.label}</span>
+                  </a>
+                ))}
+              </div>
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
