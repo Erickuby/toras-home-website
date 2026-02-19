@@ -2,99 +2,73 @@ import { motion } from "framer-motion";
 import { Heart, Users, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import torasHope from "@/assets/toras-hope.jpg";
+
+// Local assets
 import founderImage from "@/assets/founder.jpg";
+import wifeImage from "@/assets/about/wife.jpeg";
+import coupleImage from "@/assets/about/couple.jpeg";
 
 const About = () => {
   return (
     <div>
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="space-y-6"
-            >
-              <p className="text-primary font-heading font-semibold text-sm uppercase tracking-[0.15em]">About Us</p>
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground leading-tight">
-                About <span className="text-gradient">TORAS HOME</span>
-              </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Tower of Refuge and Strength Outreach (TORAS) is a community and shelter-based organization that provides care and shelter for children within communities and over 3 years now. Its operating headquarters is based at Ibadan in Oyo State, Nigeria. We have a staff strength of professionals who are committed to community-based and family-focused programs with shelter and care services for vulnerable children. This is done via counseling and education support to more than 40 children and families.Programs for children and youth includes shelter and protection which is supervised by competent hands, crisis intervention, mental health assessment, homeless services, in-home counseling and family protection services.If you would like to learn more about how you can help the kids through a variety of volunteer opportunities, employment, becoming a foster parent, or making a charitable donation – please take some time to check out the rest of our site.We thank you for helping us fulfill our mission of giving children a childhood and future!
-              </p>
-              <div className="grid sm:grid-cols-2 gap-6 pt-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <Heart className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-semibold text-foreground">Compassionate Care</h3>
-                    <p className="text-sm text-muted-foreground mt-1">We prioritize the emotional and physical well-being of each child.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <Users className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-semibold text-foreground">Community Focused</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Our programs strengthen families and empower communities.</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7 }}
-              className="rounded-2xl overflow-hidden shadow-2xl"
-            >
-              <img src={torasHope} alt="About Toras Home" className="w-full h-auto object-cover" />
-            </motion.div>
-          </div>
+      {/* Hero Section */}
+      <section className="py-20 lg:py-28 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto space-y-6"
+          >
+            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-[0.15em]">About Us</p>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-tight">
+              Nurturing Hope, <span className="text-gradient">Building Futures</span>
+            </h1>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              TORAS HOME ORPHANAGE is a non-profit organization in Ibadan, Oyo State, Nigeria, committed to caring for vulnerable children and families. Our experienced team provides shelter, psychological support, and crisis intervention services tailored to individual needs.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Vision & Mission */}
-      <section className="section-warm py-20 lg:py-28">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Vision */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-card rounded-2xl p-8 lg:p-10 border border-border"
+              className="bg-card rounded-2xl p-8 lg:p-10 border border-border shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Eye className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-              <p className="text-foreground font-semibold mb-2">
-                Secured Child for Global development
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                A healthy community where families and children come first.
-              </p>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p><strong className="text-foreground">Vision Statement:</strong> Rescuing Children from all forms of violence in Nigeria and globally, raising them to take territory for Christ.</p>
+                <p><strong className="text-foreground">Detailed Vision:</strong> Secured Child for Global development. A healthy community where children are raised in a godly way to fulfill their purpose in life.</p>
+              </div>
             </motion.div>
+
+            {/* Mission */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="bg-card rounded-2xl p-8 lg:p-10 border border-border"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-card rounded-2xl p-8 lg:p-10 border border-border shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Heart className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-              <p className="text-foreground font-semibold mb-2">
-                Providing loving, nurturing, Christ-centered homes for orphans and vulnerable Children.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Giving children a childhood and a future via protective, educative and holistic support as well as community capacity building to care for their children.
-              </p>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p><strong className="text-foreground">Mission Statement:</strong> Providing loving, nurturing, Christ-centered homes for orphans and vulnerable Children. Holistically reaching out to children and widows, educating and empowering them for self-sustainability. Providing hope and a future for orphans and vulnerable children.</p>
+                <p><strong className="text-foreground">Detailed Mission:</strong> Giving children a childhood they will never forget, and a future they will never regret. Promoting, Protecting, and Preserving the Rights and Welfare of children in Nigeria.</p>
+              </div>
             </motion.div>
           </div>
 
@@ -107,7 +81,7 @@ const About = () => {
             className="mt-16 text-center"
           >
             <h3 className="font-heading text-2xl font-bold text-foreground mb-8">Our Core Values</h3>
-            <div className="flex flex-wrapjustify-center justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               {[
                 "Integrity",
                 "Collaboration",
@@ -190,7 +164,7 @@ const About = () => {
                 <div className="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-8">
                   <div className="absolute inset-0 rounded-full bg-primary/10 animate-pulse" />
                   <img
-                    src="https://www.torashome.org.ng/wp-content/uploads/2026/02/33.jpeg"
+                    src={wifeImage}
                     alt="Mrs Abimbola Abraham -Adegboyega"
                     className="w-full h-full object-cover rounded-full border-4 border-background shadow-xl relative z-10"
                   />
@@ -236,7 +210,7 @@ const About = () => {
                 className="rounded-2xl overflow-hidden shadow-2xl"
               >
                 <img
-                  src="https://www.torashome.org.ng/wp-content/uploads/2026/02/35.jpeg"
+                  src={coupleImage}
                   alt="Founder and Wife"
                   className="w-full h-auto object-cover"
                 />
@@ -249,17 +223,26 @@ const About = () => {
       {/* CTA */}
       <section className="py-20 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-3xl font-bold text-foreground mb-4">Support Our Mission</h2>
-          <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
-            Help us create a safe haven for children in need. Your contribution makes a meaningful difference.
-          </p>
-          <Link
-            to="/donate"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-heading font-semibold hover:bg-terracotta-dark transition-colors shadow-lg shadow-primary/30"
-          >
-            <Heart className="w-5 h-5" />
-            Donate Now
-          </Link>
+          <div className="max-w-3xl mx-auto bg-primary text-primary-foreground rounded-2xl p-8 sm:p-12 shadow-2xl">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-6">Join Us in Making a Difference</h2>
+            <p className="text-lg opacity-90 mb-8">
+              Whether through volunteering, donation, or spreading the word, your support helps us create better futures for these children.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="btn bg-white text-primary hover:bg-gray-100"
+              >
+                Get Involved
+              </Link>
+              <Link
+                to="/daily-needs"
+                className="btn border-2 border-white text-white hover:bg-white/10"
+              >
+                View Daily Needs
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
