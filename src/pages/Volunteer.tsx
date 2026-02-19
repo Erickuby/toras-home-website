@@ -105,7 +105,7 @@ const Volunteer = () => {
                 <div
                     className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
                     style={{
-                        backgroundImage: "url('/src/assets/gallery/gallery-05.jpg')",
+                        backgroundImage: "url('/src/assets/gallery/gallery-04.jpg')",
                         backgroundPosition: "center 20%"
                     }}
                 >
