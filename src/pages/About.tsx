@@ -80,7 +80,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-16 text-center"
           >
-            <h3 className="font-heading text-2xl font-bold text-foreground mb-8">Our Core Values</h3>
+            <h3 className="font-heading text-2xl font-bold text-foreground mb-8">Values</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 "Integrity",
