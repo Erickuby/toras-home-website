@@ -142,6 +142,70 @@ const About = () => {
                 Elder Isaac is an active member of several professional organizations such as The Association for orphans and Vulnerable children in Nigeria (AONN), Association of orphanages and Home Operators in Nigeria (ASOHON) dedicated to child protection and sustainable development, and remains steadfast in his mission to nurture hope and resilience in an underserved communities.
               </p>
             </motion.div>
+
+            {/* Meet The Co-Founder / Wife */}
+            <div className="mt-24">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-8">
+                  <div className="absolute inset-0 rounded-full bg-primary/10 animate-pulse" />
+                  <img
+                    src="https://www.torashome.org.ng/wp-content/uploads/2026/02/33.jpeg"
+                    alt="Mrs Abimbola Abraham -Adegboyega"
+                    className="w-full h-full object-cover rounded-full border-4 border-background shadow-xl relative z-10"
+                  />
+                </div>
+
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-foreground">
+                  Mrs Abimbola Abraham -Adegboyega
+                </h3>
+                <p className="text-primary font-heading font-medium mt-2 mb-8 uppercase tracking-wider text-sm">
+                  Founder&apos;s Wife, COO & Administrative Coordinator
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="prose prose-lg mx-auto text-muted-foreground leading-relaxed text-justify sm:text-center space-y-6"
+              >
+                <p>
+                  My life’s work is shaped by a simple conviction: every child deserves safety, dignity, and a future. For the past eight years, I have served as the Administrator of Toras Orphanage Home, where I oversee operations and lead a small but dedicated team committed to protecting vulnerable children. Our facility provides shelter, healing, and educational pathways for children rescued from abuse, violence, abandonment, and poverty. Many arrive frightened and unsure of their place in the world; watching them regain confidence and hope has been the most meaningful experience of my life.
+                </p>
+                <p>
+                  I provide leadership in program management, staff coordination, compliance with regulatory standards, and resource allocation—often under significant financial constraints. We manage up to 42 children at a time, each with unique emotional needs and backgrounds. Strengthening their sense of belonging requires patience, compassion, and strategic thinking. Beyond the orphanage walls.
+                </p>
+                <p>
+                  Personal journey has shaped my commitment to this work. As a single mother raising three children, I understand the vulnerabilities families face—financial pressure, emotional strain, and the constant fight to protect one’s children from harm. This live experience has given me empathy, strength, and a deep desire to be a voice for children who cannot speak for themselves.
+                </p>
+                <p>
+                  Yet despite our achievements, I constantly confront structural challenges: inadequate funding, resistance to innovation, weak child-protection policies, and limited cross-sector collaboration. Many plans remain only ideas because the resources to execute them are scarce.
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Couple Image */}
+            <div className="mt-24">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="rounded-2xl overflow-hidden shadow-2xl"
+              >
+                <img
+                  src="https://www.torashome.org.ng/wp-content/uploads/2026/02/35.jpeg"
+                  alt="Founder and Wife"
+                  className="w-full h-auto object-cover"
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>

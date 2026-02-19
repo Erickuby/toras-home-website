@@ -161,6 +161,7 @@ const DailyNeeds = () => {
                                 src={partnersImg}
                                 alt="Children in school settings"
                                 className="w-full h-auto object-cover"
+                                loading="lazy"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
                                 <p className="text-white font-heading font-bold text-xl">Together, let’s invest in their future!</p>

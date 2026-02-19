@@ -234,6 +234,7 @@ const Index = () => {
           src={torasChildren}
           alt="Children at Toras Home"
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">

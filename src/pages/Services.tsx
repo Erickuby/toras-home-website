@@ -148,6 +148,7 @@ const Services = () => {
                               src={img}
                               alt={`${s.title} ${idx + 1}`}
                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                              loading="lazy"
                             />
                           </CarouselItem>
                         ))}
@@ -160,6 +161,7 @@ const Services = () => {
                       src={s.images[0]}
                       alt={s.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
                     />
                   )}
                 </div>
