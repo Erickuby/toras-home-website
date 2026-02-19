@@ -14,6 +14,9 @@ import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 import DailyNeeds from "./pages/DailyNeeds";
 import Volunteer from "./pages/Volunteer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +38,9 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/basic-needs" element={<DailyNeeds />} />
             <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/cookies" element={<CookiePolicy />} />
             <Route path="/donate" element={<Donate />} />
           </Route>
           <Route path="*" element={<NotFound />} />

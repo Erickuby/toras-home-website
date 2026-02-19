@@ -72,8 +72,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-background/10 text-center text-background/40 text-sm">
-          <p>© {new Date().getFullYear()} Toras Home Orphanage. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-background/40 text-sm">
+          <p>© {new Date().getFullYear()} Toras Home. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link to="/cookies" className="hover:text-primary transition-colors">Cookie Policy</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -34,11 +34,63 @@ const Volunteer = () => {
         date: ""
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Volunteer Application Submitted:", formData);
-        toast.success("Application submitted successfully! We will contact you soon.");
-        // Reset form or redirect
+
+        // Show loading state
+        const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = "Sending...";
+        }
+
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/torashome2016@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    _subject: "New Volunteer Application - Toras Home",
+                    _template: "table",
+                    _captcha: "false", // Disable captcha for cleaner UX or keep "true" if spam is issue
+                    ...formData
+                })
+            });
+
+            if (response.ok) {
+                toast.success("Application submitted successfully! We will contact you soon.");
+                setFormData({
+                    name: "",
+                    contactNumber: "",
+                    email: "",
+                    availability: "",
+                    interests: "",
+                    whyVolunteer: "",
+                    previousExperience: "no",
+                    previousExperienceDetails: "",
+                    emergencyContact: "",
+                    reference: "",
+                    backgroundCheck: "no",
+                    healthConditions: "",
+                    preferredActivities: "",
+                    signature: "",
+                    date: ""
+                });
+            } else {
+                toast.error("Something went wrong. Please try again or email us directly.");
+                console.error("Form submission failed", response);
+            }
+        } catch (error) {
+            toast.error("Network error. Please try again later.");
+            console.error("Form submission error", error);
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = "Submit Application";
+            }
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -404,8 +456,9 @@ const Volunteer = () => {
 
                             <div className="pt-6">
                                 <button
+                                    id="submit-btn"
                                     type="submit"
-                                    className="w-full btn btn-primary py-4 text-base font-bold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transform hover:-translate-y-0.5 transition-all"
+                                    className="w-full btn btn-primary py-4 text-base font-bold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transform hover:-translate-y-0.5 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     Submit Application
                                 </button>
