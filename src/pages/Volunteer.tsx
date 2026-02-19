@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import heroBg from "@/assets/gallery/gallery-04.jpg";
 
 const Volunteer = () => {
     const [formData, setFormData] = useState({
@@ -105,7 +106,7 @@ const Volunteer = () => {
                 <div
                     className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
                     style={{
-                        backgroundImage: "url('/src/assets/gallery/gallery-04.jpg')",
+                        backgroundImage: `url(${heroBg})`,
                         backgroundPosition: "center 20%"
                     }}
                 >
