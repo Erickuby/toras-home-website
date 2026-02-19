@@ -181,7 +181,7 @@ const Index = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground rounded-2xl p-6 shadow-xl">
-                <p className="font-heading text-3xl font-bold"><CountUp end={9} />+</p>
+                <p className="font-heading text-3xl font-bold"><CountUp end={8} />+</p>
                 <p className="text-sm font-medium opacity-80">Years of Impact</p>
               </div>
             </motion.div>

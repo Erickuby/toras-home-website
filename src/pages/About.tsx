@@ -21,7 +21,7 @@ const About = () => {
                 About <span className="text-gradient">TORAS HOME</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                TORAS HOME ORPHANAGE is a non-profit organization in Ibadan, Oyo State, Nigeria, committed to caring for vulnerable children and families. Our experienced team provides shelter, psychological support, and crisis intervention services tailored to individual needs.
+                Tower of Refuge and Strength Outreach (TORAS) is a community and shelter-based organization that provides care and shelter for children within communities and over 3 years now. Its operating headquarters is based at Ibadan in Oyo State, Nigeria. We have a staff strength of professionals who are committed to community-based and family-focused programs with shelter and care services for vulnerable children. This is done via counseling and education support to more than 40 children and families.Programs for children and youth includes shelter and protection which is supervised by competent hands, crisis intervention, mental health assessment, homeless services, in-home counseling and family protection services.If you would like to learn more about how you can help the kids through a variety of volunteer opportunities, employment, becoming a foster parent, or making a charitable donation – please take some time to check out the rest of our site.We thank you for helping us fulfill our mission of giving children a childhood and future!
               </p>
               <div className="grid sm:grid-cols-2 gap-6 pt-4">
                 <div className="flex items-start gap-3">
@@ -71,8 +71,11 @@ const About = () => {
                 <Eye className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Vision</h3>
+              <p className="text-foreground font-semibold mb-2">
+                Secured Child for Global development
+              </p>
               <p className="text-muted-foreground leading-relaxed">
-                Rescuing Children from all forms of violence in Nigeria and globally, raising them to take territory for Christ.
+                A healthy community where families and children come first.
               </p>
             </motion.div>
             <motion.div
@@ -86,11 +89,44 @@ const About = () => {
                 <Heart className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Mission</h3>
+              <p className="text-foreground font-semibold mb-2">
+                Providing loving, nurturing, Christ-centered homes for orphans and vulnerable Children.
+              </p>
               <p className="text-muted-foreground leading-relaxed">
-                Providing loving, nurturing, Christ-centered homes for orphans and vulnerable Children. Holistically reaching out to children and widows, educating and empowering them for self-sustainability. Providing hope and a future for orphans and vulnerable children.
+                Giving children a childhood and a future via protective, educative and holistic support as well as community capacity building to care for their children.
               </p>
             </motion.div>
           </div>
+
+          {/* Core Values Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-16 text-center"
+          >
+            <h3 className="font-heading text-2xl font-bold text-foreground mb-8">Our Core Values</h3>
+            <div className="flex flex-wrapjustify-center justify-center gap-4">
+              {[
+                "Integrity",
+                "Collaboration",
+                "Knowledge",
+                "Diversity",
+                "Commitment",
+                "Quality",
+                "Community Participation",
+                "Sustainable Development Goals (SDGs)"
+              ].map((value, index) => (
+                <span
+                  key={index}
+                  className="px-6 py-3 bg-primary/5 text-primary-dark font-medium rounded-full border border-primary/10 hover:bg-primary/10 transition-colors"
+                >
+                  {value}
+                </span>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
