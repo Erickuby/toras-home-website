@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -65,6 +65,37 @@ const Contact = () => {
             <p className="text-sm text-muted-foreground">
               No 5B Close, White House Bus stop, off Akala Express, Liberty Academy Road, Ibadan, Nigeria
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="bg-card rounded-2xl p-8 border border-border text-center card-hover lg:col-span-3 lg:w-2/3 lg:mx-auto"
+          >
+            <h3 className="font-heading font-semibold text-foreground mb-6">Connect With Us</h3>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a
+                href="https://www.facebook.com/people/Toras-home-ibadan/61555568011599/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-6 py-4 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2]/20 text-[#1877F2] transition-colors"
+              >
+                <Facebook className="w-6 h-6" />
+                <span className="font-medium">Facebook</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/toras_home/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-6 py-4 rounded-xl bg-[#E4405F]/10 hover:bg-[#E4405F]/20 text-[#E4405F] transition-colors"
+              >
+                <Instagram className="w-6 h-6" />
+                <span className="font-medium">Instagram</span>
+              </a>
+            </div>
           </motion.div>
         </div>
 

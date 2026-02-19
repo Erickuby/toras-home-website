@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Mail, Phone, MapPin } from "lucide-react";
+import { Heart, Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 import logoFull from "@/assets/logo.png";
 
 const Footer = () => {
@@ -15,6 +15,26 @@ const Footer = () => {
             <p className="text-background/60 text-sm leading-relaxed">
               Tower of Refuge and Strength Outreach — providing refuge to the homeless and hope to vulnerable children in Ibadan, Nigeria.
             </p>
+            <div className="flex items-center gap-4 pt-2">
+              <a
+                href="https://www.facebook.com/people/Toras-home-ibadan/61555568011599/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-background/60 hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/toras_home/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-background/60 hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
