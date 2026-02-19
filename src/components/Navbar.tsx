@@ -15,6 +15,7 @@ const navLinks = [
   { label: "Projects", path: "/projects" },
   { label: "Gallery", path: "/gallery" },
   { label: "Blog", path: "/blog" },
+  { label: "Volunteer", path: "/volunteer" },
   { label: "Contact", path: "/contact" },
 ];
 
