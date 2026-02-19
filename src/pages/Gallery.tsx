@@ -75,19 +75,19 @@ const galleryItems = [
   { type: 'image', src: newGallery19 },
   { type: 'video', src: newGallery20 },
   { type: 'video', src: newGallery21 },
-  { type: 'image', src: newGallery22 },
-  { type: 'image', src: newGallery23 },
-  { type: 'image', src: newGallery24 },
-  { type: 'image', src: newGallery25 },
-  { type: 'image', src: newGallery26 },
-  { type: 'image', src: newGallery27 },
+  { type: 'image', src: newGallery22, description: "End of the year thanksgiving 2025" },
+  { type: 'image', src: newGallery23, description: "End of the year thanksgiving 2025" },
+  { type: 'image', src: newGallery24, description: "End of the year thanksgiving 2025" },
+  { type: 'image', src: newGallery25, description: "End of the year thanksgiving 2025" },
+  { type: 'image', src: newGallery26, description: "End of the year thanksgiving 2025" },
+  { type: 'image', src: newGallery27, description: "The special way we celebrated Valentine's Day with flash cards emphasizing on the love of Christ which is the true love. Happy Valentine's Day to our incredible donors! ❤️ Your support means the world to us. Thank you for being our Valentine! 😊" },
   { type: 'video', src: newGallery28 },
   { type: 'video', src: newGallery29 },
   { type: 'video', src: newGallery30 },
 ];
 
 const Gallery = () => {
-  const [selected, setSelected] = useState<{ type: string; src: string } | null>(null);
+  const [selected, setSelected] = useState<{ type: string; src: string; description?: string } | null>(null);
 
   return (
     <div className="py-20 lg:py-28">
@@ -147,15 +147,15 @@ const Gallery = () => {
       {/* Lightbox */}
       {selected && (
         <div className="fixed inset-0 z-50 bg-foreground/90 flex items-center justify-center p-4 backdrop-blur-sm" onClick={() => setSelected(null)}>
-          <button onClick={() => setSelected(null)} className="absolute top-6 right-6 text-primary-foreground hover:text-primary transition-colors">
+          <button onClick={() => setSelected(null)} className="absolute top-6 right-6 text-primary-foreground hover:text-primary transition-colors z-50">
             <X className="w-8 h-8" />
           </button>
 
-          <div className="max-w-5xl w-full max-h-[85vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+          <div className="max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center" onClick={(e) => e.stopPropagation()}>
             {selected.type === 'video' ? (
               <video
                 src={selected.src}
-                className="max-w-full max-h-[85vh] rounded-xl object-contain"
+                className="max-w-full max-h-[80vh] rounded-xl object-contain mb-4"
                 controls
                 autoPlay
               />
@@ -163,8 +163,13 @@ const Gallery = () => {
               <img
                 src={selected.src}
                 alt="Gallery"
-                className="max-w-full max-h-[85vh] rounded-xl object-contain"
+                className="max-w-full max-h-[80vh] rounded-xl object-contain mb-4"
               />
+            )}
+            {selected.description && (
+              <div className="bg-black/50 text-white p-4 rounded-xl text-center max-w-2xl backdrop-blur-md">
+                <p className="text-lg">{selected.description}</p>
+              </div>
             )}
           </div>
         </div>
