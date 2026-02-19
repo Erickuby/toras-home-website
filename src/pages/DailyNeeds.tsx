@@ -1,87 +1,155 @@
 import { motion } from "framer-motion";
-import { Heart, School, Utensils, Home, ShoppingBag, CheckCircle } from "lucide-react";
+import { Heart, School, Utensils, Home, ShoppingBag, CheckCircle, Gift, Shirt, Baby, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import partnersImg from "@/assets/partners.jpg";
 
 const needsCategories = [
     {
-        title: "Foodstuff",
-        icon: Utensils,
-        items: [
-            "Rice, Beans, Garri, Yam Flour (Amala)",
-            "Semovita, Yams, Spaghetti",
-            "Cooking oil (Vegetable oil & Red oil)",
-            "Indomie Noodles",
-            "Curry, Thyme, Seasonings, Cooking Salt",
-            "Tin Tomatoes",
-            "Chicken, Meat, Fish, etc.",
-            "Eggs, Plantain"
-        ],
-    },
-    {
-        title: "Personal Care & Hygiene",
-        icon: Heart,
-        items: [
-            "Hair Cream, Body Cream",
-            "Air-fresheners",
-            "Medicated Soap, Powder",
-            "Toothpastes, Tooth brushes",
-            "Towels, Sponge",
-            "Pants / Bra / Boxers Short",
-            "Singlet / Vest / Camisole",
-            "Toiletries, Toilet Rolls, Toilet Soaps",
-            "Disinfectants",
-            "Soaps / Sanitary Towels"
-        ],
-    },
-    {
-        title: "Bedroom Needs",
+        title: "Procurement of the facility",
         icon: Home,
         items: [
-            "Bed - Double bunk",
-            "Bed sheets / Pillow Cases",
-            "Mattresses Size 2½ and 3",
-            "Rubber Slippers (Large/Medium) - For indoor use"
+            "Procurement of the facility",
+            "Mattresses and Pillows",
+            "Bed Sheets and Pillow Cases",
+            "Grinding Machine",
+            "Pressing Irons",
+            "CD/DVD Players",
+            "Office/Plastic Chairs and Tables",
+            "Oven, Toaster, Blenders",
+            "Industrial Cooking Gas and Burner",
+            "Electric Clipper",
+            "Projector",
+            "Electric Bulbs",
+            "Wall Clocks",
+            "Digital Camera",
+            "House Painting",
+            "Fans (Standing/Ceiling)",
+            "Electric Kettles/Cookers",
+            "Bathroom Slippers",
+            "Musical Instrument",
+            "Bus for Conveying Children",
+            "Wall/Mirrors/Clock",
+            "Television/Radio Sets",
+            "Children Bikes/Bicycles",
+            "Chargeable Lamps and Torches",
+            "Mops and Mops' Buckets",
+            "Table Clothes"
         ],
     },
     {
-        title: "Cleaning & Household",
-        icon: ShoppingBag,
-        items: [
-            "Detergents",
-            "Powdered Milk / Liquid Milk",
-            "Sugar",
-            "Milo / Bournvita",
-            "Corn Flakes / Custard / Goldmorn / Nutribom"
-        ],
-    },
-    {
-        title: "School Needs",
-        icon: School,
-        items: [
-            "School Bus",
-            "Black Shoes for Boys & Girls (various sizes)",
-            "Socks",
-            "Shelves, Chairs, Reading Tables",
-            "Computers / Laptop",
-            "Inspirational Books",
-            "Stationery",
-            "School Bags",
-            "Lunch boxes",
-            "Water bottles"
-        ],
-    },
-    {
-        title: "Kitchen Utensils",
+        title: "Food Items",
         icon: Utensils,
         items: [
-            "Stove (big size)",
-            "Plastic Plates / Cups / Spoons",
-            "Knives",
-            "Cooking Pots / Frying Pans",
-            "Large Spoons",
-            "Charcoal / Cooking Gas",
-            "Electric / Non-Electric Kettle"
+            "Rice",
+            "Beans",
+            "Garri",
+            "Semovita",
+            "Palm Oil",
+            "Vegetable Oil",
+            "Spaghetti",
+            "Noodles",
+            "Eggs",
+            "Yam",
+            "Fish",
+            "Meat",
+            "Chicken/Turkey (live and frozen)",
+            "Tomato Pastes, Salt, Seasoning",
+            "Curry Powder, Matches, Onions",
+            "Fresh Pepper, Ground Pepper, etc"
+        ],
+    },
+    {
+        title: "Provisions",
+        icon: ShoppingBag,
+        items: [
+            "Beverages",
+            "Powder and Liquid Milk",
+            "Golden Mourn",
+            "Custard",
+            "Cornflakes",
+            "Butter",
+            "Juice and Drinks",
+            "Peanuts",
+            "Biscuits",
+            "Candy (Sweets)",
+            "Crunchy Snacks",
+            "Sugar/Honey",
+            "Can Geisha/Titus",
+            "Mayo sauce/Mayonnaise",
+            "Crackers/Cheese Balls",
+            "Pop Corn, etc"
+        ],
+    },
+    {
+        title: "Toiletries",
+        icon: Sparkles,
+        items: [
+            "Toothpaste and Brushes",
+            "Toilet Soap and Antiseptic",
+            "Bathing Sponge",
+            "Detergents",
+            "Insecticides (Raid, Bagon, Morten, etc)",
+            "Air Fresheners"
+        ],
+    },
+    {
+        title: "Baby Items",
+        icon: Baby,
+        items: [
+            "Diapers (Pampers, Morfix, etc)",
+            "Baby Shoes",
+            "Towels",
+            "Clothing (Unisex)",
+            "Baby Powder",
+            "Baby Toys",
+            "Baby Oil/Vaseline/Cream",
+            "Baby Soap"
+        ],
+    },
+    {
+        title: "School Items",
+        icon: School,
+        items: [
+            "School Uniform",
+            "School Bags",
+            "Lunch Bags, Food Flasks and Water Bottles",
+            "Cover Shoes, Sandals and Socks",
+            "Writing Materials (Books, Pens, Pencils, etc)",
+            "Tuition Fees/Sponsorship/Scholarships",
+            "Children's Toys and Games",
+            "Play Gadgets",
+            "Games/Play Time",
+            "Literatures",
+            "Dictionaries",
+            "Solution Packs",
+            "Writing/Card Boards",
+            "Bibles",
+            "Mathematical sets",
+            "Calculators, etc"
+        ],
+    },
+    {
+        title: "Children's Wears/Household Items",
+        icon: Shirt,
+        items: [
+            "Undies (Pants, Skirts, Boxers, Singlets, etc)",
+            "Belts (For Boys and Girls)",
+            "Clothes and Shoes (Canvas/Sneakers)",
+            "Hair Combs and Brushes",
+            "Rubber, Wool and Rubber Attachments",
+            "Weave-On/Wigs",
+            "Relaxer, Roll-On and Perfume"
+        ],
+    },
+    {
+        title: "Christmas Needs",
+        icon: Gift,
+        items: [
+            "Wristwatches",
+            "Jewellery",
+            "Fashion Glasses",
+            "Christmas Toys",
+            "Items For Decorations"
         ],
     }
 ];
