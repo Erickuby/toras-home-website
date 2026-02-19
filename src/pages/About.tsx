@@ -48,8 +48,8 @@ const About = () => {
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p><strong className="text-foreground">Vision Statement:</strong> Rescuing Children from all forms of violence in Nigeria and globally, raising them to take territory for Christ.</p>
-                <p><strong className="text-foreground">Detailed Vision:</strong> Secured Child for Global development. A healthy community where children are raised in a godly way to fulfill their purpose in life.</p>
+                <p><strong className="text-foreground">Vision:</strong> A healthy community where families and children come first.</p>
+                <p><strong className="text-foreground">Vision Statement:</strong> Secured Child for Global development</p>
               </div>
             </motion.div>
 
@@ -66,8 +66,8 @@ const About = () => {
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p><strong className="text-foreground">Mission Statement:</strong> Providing loving, nurturing, Christ-centered homes for orphans and vulnerable Children. Holistically reaching out to children and widows, educating and empowering them for self-sustainability. Providing hope and a future for orphans and vulnerable children.</p>
-                <p><strong className="text-foreground">Detailed Mission:</strong> Giving children a childhood they will never forget, and a future they will never regret. Promoting, Protecting, and Preserving the Rights and Welfare of children in Nigeria.</p>
+                <p><strong className="text-foreground">Mission:</strong> Giving children a childhood and a future via protective, educative and holistic support as well as community capacity building to care for their children.</p>
+                <p><strong className="text-foreground">Mission Statement:</strong> Providing loving, nurturing, Christ-centered homes for orphans and vulnerable Children.</p>
               </div>
             </motion.div>
           </div>
