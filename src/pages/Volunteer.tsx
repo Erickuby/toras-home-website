@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import heroBg from "@/assets/gallery/gallery-04.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Volunteer = () => {
     const [formData, setFormData] = useState({
