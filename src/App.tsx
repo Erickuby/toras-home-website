@@ -18,6 +18,9 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
+import TechIT from "./pages/projects/TechIT";
+import Building from "./pages/projects/Building";
+import Other from "./pages/projects/Other";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +36,9 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/tech-it" element={<TechIT />} />
+            <Route path="/projects/building" element={<Building />} />
+            <Route path="/projects/other" element={<Other />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
