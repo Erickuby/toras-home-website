@@ -21,6 +21,8 @@ import NotFound from "./pages/NotFound";
 import TechIT from "./pages/projects/TechIT";
 import Building from "./pages/projects/Building";
 import Other from "./pages/projects/Other";
+import PhaseOne from "./pages/projects/PhaseOne";
+import PhaseTwo from "./pages/projects/PhaseTwo";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +40,8 @@ const App = () => (
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/tech-it" element={<TechIT />} />
             <Route path="/projects/building" element={<Building />} />
+            <Route path="/projects/building/phase-1" element={<PhaseOne />} />
+            <Route path="/projects/building/phase-2" element={<PhaseTwo />} />
             <Route path="/projects/other" element={<Other />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />

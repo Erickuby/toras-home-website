@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle2, Clock, Building2, Hammer } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Building2, Hammer } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -34,30 +34,36 @@ const Building = () => {
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.1 }}
-                            className="bg-card rounded-3xl border border-border overflow-hidden"
                         >
-                            <div className="bg-gradient-to-br from-green-500/10 via-emerald-500/5 to-transparent p-8 lg:p-12 relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-8 opacity-10">
-                                    <Building2 className="w-48 h-48" />
-                                </div>
+                            <Link to="/projects/building/phase-1" className="block group">
+                                <div className="bg-card rounded-3xl border border-border overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-green-500/50 cursor-pointer">
+                                    <div className="bg-gradient-to-br from-green-500/10 via-emerald-500/5 to-transparent p-8 lg:p-12 relative overflow-hidden">
+                                        <div className="absolute top-0 right-0 p-8 opacity-10">
+                                            <Building2 className="w-48 h-48" />
+                                        </div>
 
-                                <div className="flex items-center gap-2 mb-6 relative z-10">
-                                    <span className="px-3 py-1 bg-green-500/20 text-green-600 dark:text-green-400 text-xs font-heading font-semibold rounded-full uppercase tracking-wider">
-                                        Phase 1
-                                    </span>
-                                    <span className="px-3 py-1 bg-background/80 flex items-center gap-1 text-foreground text-xs font-heading font-semibold rounded-full uppercase tracking-wider border border-border/50">
-                                        <CheckCircle2 className="w-3 h-3 text-green-500" />
-                                        Completed
-                                    </span>
-                                </div>
+                                        <div className="flex items-center gap-2 mb-6 relative z-10">
+                                            <span className="px-3 py-1 bg-green-500/20 text-green-600 dark:text-green-400 text-xs font-heading font-semibold rounded-full uppercase tracking-wider">
+                                                Phase 1
+                                            </span>
+                                            <span className="px-3 py-1 bg-background/80 flex items-center gap-1 text-foreground text-xs font-heading font-semibold rounded-full uppercase tracking-wider border border-border/50">
+                                                <CheckCircle2 className="w-3 h-3 text-green-500" />
+                                                Completed
+                                            </span>
+                                        </div>
 
-                                <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4 relative z-10">
-                                    Acquired Property
-                                </h2>
-                                <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl relative z-10">
-                                    Strategic acquisition of the main facility plot aimed at establishing our central hub. This milestone lays the permanent foundation for all our upcoming programs and community outreach efforts.
-                                </p>
-                            </div>
+                                        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4 relative z-10 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                                            Acquired Property
+                                        </h2>
+                                        <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl relative z-10">
+                                            Strategic acquisition of the main facility plot aimed at establishing our central hub. This milestone lays the permanent foundation for all our upcoming programs and community outreach efforts.
+                                        </p>
+                                        <div className="mt-6 flex items-center text-green-600 dark:text-green-400 font-medium text-sm relative z-10 group-hover:underline">
+                                            View Completed Projects <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         </motion.div>
 
                         {/* Phase 2 */}
@@ -65,30 +71,36 @@ const Building = () => {
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
-                            className="bg-card rounded-3xl border border-border overflow-hidden"
                         >
-                            <div className="bg-gradient-to-br from-primary/10 via-accent/5 to-transparent p-8 lg:p-12 relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-8 opacity-10">
-                                    <Hammer className="w-48 h-48" />
-                                </div>
+                            <Link to="/projects/building/phase-2" className="block group">
+                                <div className="bg-card rounded-3xl border border-border overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/50 cursor-pointer">
+                                    <div className="bg-gradient-to-br from-primary/10 via-accent/5 to-transparent p-8 lg:p-12 relative overflow-hidden">
+                                        <div className="absolute top-0 right-0 p-8 opacity-10">
+                                            <Hammer className="w-48 h-48" />
+                                        </div>
 
-                                <div className="flex items-center gap-2 mb-6 relative z-10">
-                                    <span className="px-3 py-1 bg-primary/15 text-primary text-xs font-heading font-semibold rounded-full uppercase tracking-wider">
-                                        Phase 2
-                                    </span>
-                                    <span className="px-3 py-1 bg-background/80 flex items-center gap-1 text-foreground text-xs font-heading font-semibold rounded-full uppercase tracking-wider border border-border/50">
-                                        <Clock className="w-3 h-3 text-amber-500" />
-                                        Coming Soon
-                                    </span>
-                                </div>
+                                        <div className="flex items-center gap-2 mb-6 relative z-10">
+                                            <span className="px-3 py-1 bg-primary/15 text-primary text-xs font-heading font-semibold rounded-full uppercase tracking-wider">
+                                                Phase 2
+                                            </span>
+                                            <span className="px-3 py-1 bg-background/80 flex items-center gap-1 text-foreground text-xs font-heading font-semibold rounded-full uppercase tracking-wider border border-border/50">
+                                                <Clock className="w-3 h-3 text-amber-500" />
+                                                Coming Soon
+                                            </span>
+                                        </div>
 
-                                <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4 relative z-10">
-                                    Renovation & Upgrading Facility
-                                </h2>
-                                <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl relative z-10">
-                                    Complete internal and external remodeling of the acquired space. We will be equipping the facility with modern learning environments, safe recreational areas, and upgraded infrastructure to host the Tech for Kids program.
-                                </p>
-                            </div>
+                                        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4 relative z-10 group-hover:text-primary transition-colors">
+                                            Renovation & Upgrading Facility
+                                        </h2>
+                                        <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl relative z-10">
+                                            Complete internal and external remodeling of the acquired space. We will be equipping the facility with modern learning environments, safe recreational areas, and upgraded infrastructure to host the Tech for Kids program.
+                                        </p>
+                                        <div className="mt-6 flex items-center text-primary font-medium text-sm relative z-10 group-hover:underline">
+                                            Learn More <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>
