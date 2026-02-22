@@ -5,7 +5,84 @@ import { X, Play } from "lucide-react";
 
 
 
-const galleryItems: { type: 'image' | 'video'; src: string; description?: string }[] = [];
+import gal1 from "@/assets/gallery/gallery-01.jpeg";
+import gal2 from "@/assets/gallery/gallery-02.mp4";
+import gal3 from "@/assets/gallery/gallery-03.jpeg";
+import gal4 from "@/assets/gallery/gallery-04.jpeg";
+import gal5 from "@/assets/gallery/gallery-05.jpeg";
+import gal6 from "@/assets/gallery/gallery-06.jpeg";
+import gal7 from "@/assets/gallery/gallery-07.jpeg";
+import gal8 from "@/assets/gallery/gallery-08.jpeg";
+import gal9 from "@/assets/gallery/gallery-09.jpeg";
+import gal10 from "@/assets/gallery/gallery-10.jpeg";
+import gal11 from "@/assets/gallery/gallery-11.jpeg";
+import gal12 from "@/assets/gallery/gallery-12.jpeg";
+import gal13 from "@/assets/gallery/gallery-13.jpeg";
+import gal14 from "@/assets/gallery/gallery-14.jpeg";
+import gal15 from "@/assets/gallery/gallery-15.jpeg";
+import gal16 from "@/assets/gallery/gallery-16.jpeg";
+import gal17 from "@/assets/gallery/gallery-17.jpeg";
+import gal18 from "@/assets/gallery/gallery-18.jpeg";
+import gal19 from "@/assets/gallery/gallery-19.mp4";
+import gal20 from "@/assets/gallery/gallery-20.mp4";
+import gal21 from "@/assets/gallery/gallery-21.jpeg";
+import gal22 from "@/assets/gallery/gallery-22.jpeg";
+import gal23 from "@/assets/gallery/gallery-23.jpeg";
+import gal24 from "@/assets/gallery/gallery-24.mp4";
+import gal25 from "@/assets/gallery/gallery-25.mp4";
+import gal26 from "@/assets/gallery/gallery-26.mp4";
+import gal27 from "@/assets/gallery/gallery-27.jpeg";
+import gal28 from "@/assets/gallery/gallery-28.jpeg";
+import gal29 from "@/assets/gallery/gallery-29.jpg";
+import gal30 from "@/assets/gallery/gallery-30.jpg";
+import gal31 from "@/assets/gallery/gallery-31.jpg";
+import gal32 from "@/assets/gallery/gallery-32.jpg";
+import gal33 from "@/assets/gallery/gallery-33.jpg";
+import gal34 from "@/assets/gallery/gallery-34.jpg";
+import gal35 from "@/assets/gallery/gallery-35.jpg";
+import gal36 from "@/assets/gallery/gallery-36.jpg";
+import gal37 from "@/assets/gallery/gallery-37.jpg";
+
+const galleryItems = [
+  { type: "image", src: gal1 },
+  { type: "video", src: gal2 },
+  { type: "image", src: gal3 },
+  { type: "image", src: gal4 },
+  { type: "image", src: gal5 },
+  { type: "image", src: gal6 },
+  { type: "image", src: gal7 },
+  { type: "image", src: gal8 },
+  { type: "image", src: gal9 },
+  { type: "image", src: gal10 },
+  { type: "image", src: gal11 },
+  { type: "image", src: gal12 },
+  { type: "image", src: gal13 },
+  { type: "image", src: gal14 },
+  { type: "image", src: gal15 },
+  { type: "image", src: gal16 },
+  { type: "image", src: gal17 },
+  { type: "image", src: gal18 },
+  { type: "video", src: gal19 },
+  { type: "video", src: gal20 },
+  { type: "image", src: gal21 },
+  { type: "image", src: gal22 },
+  { type: "image", src: gal23 },
+  { type: "video", src: gal24 },
+  { type: "video", src: gal25 },
+  { type: "video", src: gal26 },
+  { type: "image", src: gal27 },
+  { type: "image", src: gal28 },
+  { type: "image", src: gal29 },
+  { type: "image", src: gal30 },
+  { type: "image", src: gal31 },
+  { type: "image", src: gal32 },
+  { type: "image", src: gal33 },
+  { type: "image", src: gal34 },
+  { type: "image", src: gal35 },
+  { type: "image", src: gal36 },
+  { type: "image", src: gal37 },
+];
+
 
 const Gallery = () => {
   const [selected, setSelected] = useState<{ type: string; src: string; description?: string } | null>(null);
