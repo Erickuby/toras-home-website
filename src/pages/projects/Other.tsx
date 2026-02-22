@@ -23,7 +23,7 @@ const Other = () => {
                     >
                         <p className="text-primary font-heading font-semibold text-sm uppercase tracking-[0.15em]">Miscellaneous</p>
                         <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground">Other Projects</h1>
-                        <p className="text-muted-foreground text-lg">
+                        <p className="text-foreground text-lg">
                             Exploring new avenues to support and develop our community.
                         </p>
                     </motion.div>
@@ -54,7 +54,7 @@ const Other = () => {
                                 <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4 relative z-10">
                                     School Bus Acquisition
                                 </h2>
-                                <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl relative z-10">
+                                <p className="text-foreground text-lg leading-relaxed max-w-2xl relative z-10">
                                     Securing reliable transportation to ensure safe and consistent access to our programs. A dedicated school bus will connect children from surrounding communities to our facility, removing one of the biggest barriers to education and opportunity.
                                 </p>
                             </div>
@@ -73,7 +73,7 @@ const Other = () => {
                             <h2 className="font-heading text-xl font-bold text-foreground mb-3">
                                 More Announcements Coming
                             </h2>
-                            <p className="text-muted-foreground max-w-md mx-auto text-sm">
+                            <p className="text-foreground max-w-md mx-auto text-sm">
                                 We are constantly evaluating new ways to bring value. Check back later for updates on additional programs, outreach events, and specialized initiatives.
                             </p>
                         </motion.div>
