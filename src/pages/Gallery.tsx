@@ -12,7 +12,6 @@ import gal4 from "@/assets/gallery/gallery-04.jpeg";
 import gal5 from "@/assets/gallery/gallery-05.jpeg";
 import gal6 from "@/assets/gallery/gallery-06.jpeg";
 import gal7 from "@/assets/gallery/gallery-07.jpeg";
-import gal8 from "@/assets/gallery/gallery-08.jpeg";
 import gal9 from "@/assets/gallery/gallery-09.jpeg";
 import gal10 from "@/assets/gallery/gallery-10.jpeg";
 import gal11 from "@/assets/gallery/gallery-11.jpeg";
@@ -51,7 +50,6 @@ const galleryItems = [
   { type: "image", src: gal5 },
   { type: "image", src: gal6 },
   { type: "image", src: gal7 },
-  { type: "image", src: gal8 },
   { type: "image", src: gal9 },
   { type: "image", src: gal10 },
   { type: "image", src: gal11 },
