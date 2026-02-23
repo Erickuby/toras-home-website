@@ -3,6 +3,8 @@ import { ArrowLeft, CheckCircle2, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+import phase1Video from "@/assets/gallery/gallery-02.mp4";
+
 const PhaseOne = () => {
     return (
         <div className="py-20 lg:py-28">
@@ -44,16 +46,13 @@ const PhaseOne = () => {
                     >
                         <h2 className="font-heading text-2xl font-bold text-foreground mb-8 text-center">Project Gallery</h2>
 
-                        <div className="bg-card rounded-3xl border border-border overflow-hidden text-center py-20 px-8">
-                            <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <Building2 className="w-10 h-10 text-green-500" />
-                            </div>
-                            <h3 className="font-heading text-xl font-bold text-foreground mb-4">
-                                Media Coming Soon
-                            </h3>
-                            <p className="text-muted-foreground max-w-md mx-auto">
-                                Images and videos of the completed property acquisition will be added here shortly. Check back soon!
-                            </p>
+                        <div className="bg-card rounded-3xl border border-border overflow-hidden text-center py-10 px-4 sm:px-8 max-w-4xl mx-auto">
+                            <video
+                                src={phase1Video}
+                                controls
+                                className="w-full rounded-xl shadow-lg border border-border"
+                                style={{ maxHeight: '70vh' }}
+                            />
                         </div>
                     </motion.div>
                 </div>

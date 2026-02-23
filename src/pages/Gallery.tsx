@@ -6,7 +6,6 @@ import { X, Play } from "lucide-react";
 
 
 import gal1 from "@/assets/gallery/gallery-01.jpeg";
-import gal2 from "@/assets/gallery/gallery-02.mp4";
 import gal3 from "@/assets/gallery/gallery-03.jpeg";
 import gal4 from "@/assets/gallery/gallery-04.jpeg";
 import gal5 from "@/assets/gallery/gallery-05.jpeg";
@@ -44,7 +43,6 @@ import gal37 from "@/assets/gallery/gallery-37.jpg";
 
 const galleryItems = [
   { type: "image", src: gal1 },
-  { type: "video", src: gal2 },
   { type: "image", src: gal3 },
   { type: "image", src: gal4 },
   { type: "image", src: gal5 },
